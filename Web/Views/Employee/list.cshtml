@@ -1,4 +1,4 @@
-﻿@model IEnumerable<EmployeeForm.Core.Model.EmployeeModel>
+﻿@model IEnumerable<Core.Model.EmployeeModel>
 @{
     Layout = null;
 }
@@ -88,35 +88,35 @@
                     @Html.DisplayNameFor(model => model.Name)
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.age)
+                    @Html.DisplayNameFor(model => model.Age)
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.gender)
+                    @Html.DisplayNameFor(model => model.Gender)
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.qualification)
+                    @Html.DisplayNameFor(model => model.Qualification)
                 </th>
                 <th>
                     @Html.DisplayNameFor(model => model.JobRole)
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.experience)
+                    @Html.DisplayNameFor(model => model.Experience)
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.address)
+                    @Html.DisplayNameFor(model => model.Address)
 
                 </th>
                 <th>
                     @Html.DisplayNameFor(model => model.PhoneNo)
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.email)
+                    @Html.DisplayNameFor(model => model.Email)
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.password)
+                    @Html.DisplayNameFor(model => model.Password)
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.Re_Password)
+                    @Html.DisplayNameFor(model => model.ConfirmPassword)
                 </th>
                 <th>
                     Action
@@ -131,39 +131,39 @@
                         @Html.DisplayFor(model => i.Name)
                     </td>
                     <td>
-                        @Html.DisplayFor(model => i.age)
+                        @Html.DisplayFor(model => i.Age)
                     </td>
                     <td>
-                        @Html.DisplayFor(model => i.gender)
+                        @Html.DisplayFor(model => i.Gender)
                     </td>
                     <td>
-                        @Html.DisplayFor(model => i.qualification)
+                        @Html.DisplayFor(model => i.Qualification)
                     </td>
                     <td>
                         @Html.DisplayFor(model => i.JobRole)
                     </td>
                     <td>
-                        @Html.DisplayFor(model => i.experience)
+                        @Html.DisplayFor(model => i.Experience)
                     </td>
                     <td>
-                        @Html.DisplayFor(model => i.address)
+                        @Html.DisplayFor(model => i.Address)
                     </td>
                     <td>
                         @Html.DisplayFor(model => i.PhoneNo)
                     </td>
                     <td>
-                        @Html.DisplayFor(model => i.email)
+                        @Html.DisplayFor(model => i.Email)
                     </td>
                     <td>
-                        @Html.DisplayFor(model => i.password)
+                        @Html.DisplayFor(model => i.Password)
                     </td>
                     <td>
-                        @Html.DisplayFor(model => i.Re_Password)
+                        @Html.DisplayFor(model => i.ConfirmPassword)
                     </td>
                     <td>
-                        @Html.ActionLink(" ","Edit", new { id=i.ID},new{@class="fa-solid fa-pen-to-square",title="Edit"})
+                        @Html.ActionLink(" ","Edit", new { id=i.Id},new{@class="fa-solid fa-pen-to-square",title="Edit"})
                         <button onclick="return confirm('Are you sure want to delete this record?')">
-                            @Html.ActionLink(" ", "Delete", new {id = i.ID},new{@class="fas fa-trash-alt text-danger" })
+                            @Html.ActionLink(" ", "Delete", new {id = i.Id},new{@class="fas fa-trash-alt text-danger" })
                     
                         </button>
                         

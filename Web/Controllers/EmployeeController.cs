@@ -1,8 +1,8 @@
-﻿using EmployeeForm.Core.IService;
-using EmployeeForm.Core.Model;
+﻿using Core.IService;
+using Core.Model;
 using Microsoft.AspNetCore.Mvc;
 
-namespace EmpoyeeForm.Controllers
+namespace Web.Controllers
 {
     public class EmployeeController : Controller
     {
@@ -30,7 +30,7 @@ namespace EmpoyeeForm.Controllers
         [HttpPost]
         public IActionResult Create(EmployeeModel? employeeModel)
         {
-            _employeeService.Createform(employeeModel);
+            _employeeService.Insert(employeeModel);
             return RedirectToAction("List");
             
 
@@ -41,7 +41,7 @@ namespace EmpoyeeForm.Controllers
         #region List
         public IActionResult List()
         {
-            var list = _employeeService.listform();
+            var list = _employeeService.Get();
             return View(list);
         }
         #endregion
@@ -66,7 +66,7 @@ namespace EmpoyeeForm.Controllers
         #region Delete
         public IActionResult Delete(int id)
         {
-           _employeeService.deleteid(id);
+           _employeeService.Remove(id);
            return RedirectToAction("List");
         }
         #endregion

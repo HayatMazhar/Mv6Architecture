@@ -1,19 +1,12 @@
-﻿using EmployeeForm.Core.Model;
-using EmployeeForm.Entity;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Core.Model;
 
-namespace EmployeeForm.Core.IRepository
+namespace Core.IRepository
 {
     public  interface IEmployeeRepository
     {
-        public void Createform(EmployeeModel? employeeModel);
-
-        List<EmployeeModel> listform();
-        public void deleteid(int id);
+        public void Insert(EmployeeModel? model);
+        List<EmployeeModel> Get();
+        public void Remove(int id);
         public EmployeeModel Save(int id);
     }
 }

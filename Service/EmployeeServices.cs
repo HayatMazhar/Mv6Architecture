@@ -1,37 +1,30 @@
-﻿using EmployeeForm.Core.IRepository;
-using EmployeeForm.Core.IService;
-using EmployeeForm.Core.Model;
+﻿using Core.IRepository;
+using Core.IService;
+using Core.Model;
 
-namespace EmployeeForm.Services
+namespace Services
 {
     public class EmployeeServices:IEmployeeService
     {
-        readonly IEmployeeRepository _employeeRepository;
+        private readonly IEmployeeRepository _employeeRepository;
         public EmployeeServices(IEmployeeRepository employeeRepository)
         {
             _employeeRepository=employeeRepository;
         }
-        #region Createform
-        public void Createform(EmployeeModel? employeeModel)
+        
+        public void Insert(EmployeeModel? employeeModel)
         {
-            _employeeRepository.Createform(employeeModel);
+            _employeeRepository.Insert(employeeModel);
         }
-        #endregion
-
       
-
-        #region Listform
-
-       
-        public List<EmployeeModel> listform()
+        public List<EmployeeModel> Get()
         {
-             return _employeeRepository.listform();
+             return _employeeRepository.Get();
         }
-        #endregion
 
-        public void deleteid(int id)
+        public void Remove(int id)
         {
-            _employeeRepository.deleteid(id);
+            _employeeRepository.Remove(id);
         }
 
         public EmployeeModel Save(int id)

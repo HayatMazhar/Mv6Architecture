@@ -1,4 +1,4 @@
-﻿@model EmployeeForm.Core.Model.EmployeeModel
+﻿@model Core.Model.EmployeeModel
 @{
     Layout = null;
 }
@@ -49,22 +49,22 @@
                             <h2 class="text-uppercase text-center mb-5">Create an account</h2>
 
                             <form>
-                                @Html.HiddenFor(m=>m.ID)
+                                @Html.HiddenFor(m=>m.Id)
                                 <div class="col-md-6">
                                     <label for="inputEmail4" class="form-label">Name<span style="color:red">*</span></label>
                                     @Html.TextBoxFor(m => m.Name, new { @class = "form-control",@placeholder="Enter your Name",@id="name",@name="name"})
                                 </div>
                                 <div class="col-md-6 mt-1">
                                     <label for="inputPassword4" class="form-label">Age<span style="color:red">*</span></label>
-                                    @Html.TextBoxFor(m => m.age, new { @class = "form-control",@placeholder="Enter your age",@id="age",@name="age"})
+                                    @Html.TextBoxFor(m => m.Age, new { @class = "form-control",@placeholder="Enter your age",@id="age",@name="age"})
                                 </div>
                                 <div class="col-md-6 mt-1 ">
                                     <label for="inputEmail4" class="form-label">Gender<span style="color:red">*</span></label>
 
                                     <div class="form-check mt-2" id="radio"> 
-                                        <label> @Html.RadioButtonFor(m => m.gender,"Male")Male</label>  
-                                        <label> @Html.RadioButtonFor(m => m.gender,"Female")Female</label>
-                                        <label> @Html.RadioButtonFor(m => m.gender,"Other")Other</label>
+                                        <label> @Html.RadioButtonFor(m => m.Gender,"Male")Male</label>
+                                        <label> @Html.RadioButtonFor(m => m.Gender,"Female")Female</label>
+                                        <label> @Html.RadioButtonFor(m => m.Gender,"Other")Other</label>
                                     </div>
 
                                 </div>
@@ -72,7 +72,7 @@
                                 <div class="col-md-12 mt-1">
                                     <label for="inputPassword4" class="form-label">Qualification<span style="color:red">*</span></label>
                                     <div class="course" style="color:black;">
-                                        @Html.DropDownListFor(m=>m.qualification, new List<SelectListItem>
+                                        @Html.DropDownListFor(m=>m.Qualification, new List<SelectListItem>
                                     {
                                     new SelectListItem{ Text="BE"},
                                     new SelectListItem{ Text="B.Tech"},
@@ -101,11 +101,11 @@
                                 </div>
                                 <div class="col-md-6 mt-1">
                                     <label for="inputAddress2" class="form-label">Experience<span style="color:red">*</span></label>
-                                    @Html.TextBoxFor(m => m.experience, new { @class = "form-control",@placeholder="Enter your Experience",@id="experience" })
+                                    @Html.TextBoxFor(m => m.Experience, new { @class = "form-control",@placeholder="Enter your Experience",@id="experience" })
                                 </div>
                                 <div class="col-md-6 mt-1">
                                     <label for="inputCity" class="form-label">Location<span style="color:red">*</span></label>
-                                    @Html.TextBoxFor(m => m.address, new { @class = "form-control",@placeholder="Enter your Address",@id="location" })
+                                    @Html.TextBoxFor(m => m.Address, new { @class = "form-control",@placeholder="Enter your Address",@id="location" })
                                 </div>
                                 <div class="col-md-6 mt-1">
                                     <label for="inputCity" class="form-label">Mobile<span style="color:red">*</span></label>
@@ -113,18 +113,18 @@
                                 </div>
                                 <div class="col-md-6 mt-1">
                                     <label for="inputCity" class="form-label">Email ID<span style="color:red">*</span></label>
-                                    @Html.TextBoxFor(m => m.email, new { @class = "form-control",@placeholder="Enter your Email",@id="email" })
+                                    @Html.TextBoxFor(m => m.Email, new { @class = "form-control",@placeholder="Enter your Email",@id="email" })
                                 </div>
                                 <div class="col-md-6 mt-1">
                                     <label for="inputCity" class="form-label">Password<span style="color:red">*</span></label>
-                                    @Html.PasswordFor(m => m.password, new {@maxlength="5", @class = "form-control",@placeholder="Enter your Password",@type="password",@id="passtype"})
+                                    @Html.PasswordFor(m => m.Password, new {@maxlength="5", @class = "form-control",@placeholder="Enter your Password",@type="password",@id="passtype"})
                                 </div>
                                 <div class="col-md-6 mt-1">
                                     <input class="pt-3" type="checkbox" onclick="mypassword()">Show Password
                                 </div>
                                 <div class="col-md-6 mt-1">
                                     <label for="inputCity" class="form-label">Re-Password<span style="color:red">*</span></label>
-                                    @Html.PasswordFor(m => m.Re_Password, new { @maxlength="5",@class = "form-control",@placeholder="Enter your Password again",@type="password",@id="repassword"})
+                                    @Html.PasswordFor(m => m.ConfirmPassword, new { @maxlength="5",@class = "form-control",@placeholder="Enter your Password again",@type="password",@id="repassword"})
                                 </div>
                                 <div class="col-md-6 mt-1">
                                     <input class="pt-3" type="checkbox" onclick="myrepassword()">Show Password

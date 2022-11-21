@@ -1,9 +1,9 @@
-﻿using EmployeeForm.Core.IRepository;
-using EmployeeForm.Core.IService;
-using EmployeeForm.Repository;
-using EmployeeForm.Services;
+﻿using Core.IRepository;
+using Core.IService;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
+using Repository;
+using Services;
 
 namespace EmployeeForm.Utility
 {
