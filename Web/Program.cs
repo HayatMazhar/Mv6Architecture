@@ -1,5 +1,5 @@
 using EmployeeForm.Entity;
-using EmployeeForm.Utility;
+using Utility;
 
 var builder = WebApplication.CreateBuilder(args);
 

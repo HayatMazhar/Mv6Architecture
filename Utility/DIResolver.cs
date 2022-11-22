@@ -5,24 +5,17 @@ using Microsoft.Extensions.DependencyInjection;
 using Repository;
 using Services;
 
-namespace EmployeeForm.Utility
+namespace Utility
 {
     public  class DiResolver
     {
         public static void ConfigureServices(IServiceCollection services)
         {
-            #region Context accesor
             services.AddTransient<IHttpContextAccessor, HttpContextAccessor>();
-            #endregion
 
-            #region Services
             services.AddScoped<IEmployeeService, EmployeeServices>();
 
-            #endregion
-
-            #region Repository
             services.AddScoped<IEmployeeRepository, EmployeeRepository>();
-            #endregion
         }
     }
 }
